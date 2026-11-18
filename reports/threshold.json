@@ -1,0 +1,73 @@
+{
+  "setting": {
+    "resolution": 512,
+    "memory": 8000,
+    "p50_ms": 48.543708500801586,
+    "p95_ms": 50.45968716003699
+  },
+  "target_false_reject_rate": 0.01,
+  "products": {
+    "pcb1": {
+      "calibration_parts": 200,
+      "from_normals": {
+        "threshold": 1.9799569845199585,
+        "false_reject_rate": 0.04,
+        "escape_rate": 0.19
+      },
+      "with_defects": {
+        "threshold": 1.7703449726104736,
+        "false_reject_rate": 0.1,
+        "escape_rate": 0.03
+      }
+    },
+    "pcb2": {
+      "calibration_parts": 200,
+      "from_normals": {
+        "threshold": 2.0746402740478516,
+        "false_reject_rate": 0.02,
+        "escape_rate": 0.34
+      },
+      "with_defects": {
+        "threshold": 1.7768257856369019,
+        "false_reject_rate": 0.09,
+        "escape_rate": 0.08
+      }
+    },
+    "pcb3": {
+      "calibration_parts": 200,
+      "from_normals": {
+        "threshold": 2.0036630630493164,
+        "false_reject_rate": 0.0297029702970297,
+        "escape_rate": 0.3
+      },
+      "with_defects": {
+        "threshold": 1.8059494495391846,
+        "false_reject_rate": 0.1188118811881188,
+        "escape_rate": 0.08
+      }
+    },
+    "pcb4": {
+      "calibration_parts": 200,
+      "from_normals": {
+        "threshold": 2.467165231704712,
+        "false_reject_rate": 0.0,
+        "escape_rate": 0.47
+      },
+      "with_defects": {
+        "threshold": 1.9496402740478516,
+        "false_reject_rate": 0.06930693069306931,
+        "escape_rate": 0.01
+      }
+    }
+  },
+  "mean": {
+    "from_normals": {
+      "false_reject_rate": 0.022425742574257425,
+      "escape_rate": 0.325
+    },
+    "with_defects": {
+      "false_reject_rate": 0.09452970297029703,
+      "escape_rate": 0.05
+    }
+  }
+}

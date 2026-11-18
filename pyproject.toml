@@ -1,0 +1,20 @@
+[project]
+name = "visual-inspection"
+version = "0.1.0"
+description = "Surface defect detection and location on manufactured parts, learned from normal images only and run on a CPU."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Abdirazak Mubarak" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+    "opencv-python",
+    "onnxruntime",
+    "matplotlib",
+    "pillow",
+]
+
+[project.optional-dependencies]
+building = ["torch", "torchvision", "onnx", "scikit-learn"]
+test = ["pytest"]

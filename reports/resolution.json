@@ -1,0 +1,318 @@
+{
+  "settings": [
+    {
+      "resolution": 256,
+      "memory": 2000,
+      "p50_ms": 13.081520504783839,
+      "p95_ms": 14.567041980626527,
+      "mean": {
+        "auroc": 0.9198344059405941,
+        "aupro": 0.8466629379212831,
+        "false_reject_rate": 0.0199009900990099,
+        "escape_rate": 0.515
+      },
+      "products": {
+        "pcb1": {
+          "auroc": 0.8906000000000001,
+          "threshold": 1.925187110900879,
+          "false_reject_rate": 0.02,
+          "escape_rate": 0.6,
+          "caught_by_size": {
+            "small": {
+              "parts": 52,
+              "caught": 0.21153846153846154
+            },
+            "medium": {
+              "parts": 35,
+              "caught": 0.45714285714285713
+            },
+            "large": {
+              "parts": 13,
+              "caught": 1.0
+            }
+          },
+          "aupro": 0.8588587722334179
+        },
+        "pcb2": {
+          "auroc": 0.9125,
+          "threshold": 1.8968491554260254,
+          "false_reject_rate": 0.02,
+          "escape_rate": 0.65,
+          "caught_by_size": {
+            "small": {
+              "parts": 30,
+              "caught": 0.16666666666666666
+            },
+            "medium": {
+              "parts": 62,
+              "caught": 0.3548387096774194
+            },
+            "large": {
+              "parts": 8,
+              "caught": 1.0
+            }
+          },
+          "aupro": 0.8567036631298263
+        },
+        "pcb3": {
+          "auroc": 0.8904950495049505,
+          "threshold": 1.7580304145812988,
+          "false_reject_rate": 0.019801980198019802,
+          "escape_rate": 0.59,
+          "caught_by_size": {
+            "small": {
+              "parts": 32,
+              "caught": 0.125
+            },
+            "medium": {
+              "parts": 54,
+              "caught": 0.42592592592592593
+            },
+            "large": {
+              "parts": 14,
+              "caught": 1.0
+            }
+          },
+          "aupro": 0.813369490591563
+        },
+        "pcb4": {
+          "auroc": 0.9857425742574257,
+          "threshold": 1.805228352546692,
+          "false_reject_rate": 0.019801980198019802,
+          "escape_rate": 0.22,
+          "caught_by_size": {
+            "small": {
+              "parts": 3,
+              "caught": 0.0
+            },
+            "medium": {
+              "parts": 49,
+              "caught": 0.7755102040816326
+            },
+            "large": {
+              "parts": 48,
+              "caught": 0.8333333333333334
+            }
+          },
+          "aupro": 0.8577198257303253
+        }
+      }
+    },
+    {
+      "resolution": 384,
+      "memory": 2000,
+      "p50_ms": 21.165812489925884,
+      "p95_ms": 21.54074615536956,
+      "mean": {
+        "auroc": 0.9571754950495049,
+        "aupro": 0.8975674013591683,
+        "false_reject_rate": 0.02987623762376238,
+        "escape_rate": 0.34750000000000003
+      },
+      "products": {
+        "pcb1": {
+          "auroc": 0.9619,
+          "threshold": 2.0000972747802734,
+          "false_reject_rate": 0.05,
+          "escape_rate": 0.29,
+          "caught_by_size": {
+            "small": {
+              "parts": 52,
+              "caught": 0.6346153846153846
+            },
+            "medium": {
+              "parts": 35,
+              "caught": 0.7142857142857143
+            },
+            "large": {
+              "parts": 13,
+              "caught": 1.0
+            }
+          },
+          "aupro": 0.924884524200811
+        },
+        "pcb2": {
+          "auroc": 0.937,
+          "threshold": 2.171422004699707,
+          "false_reject_rate": 0.02,
+          "escape_rate": 0.64,
+          "caught_by_size": {
+            "small": {
+              "parts": 30,
+              "caught": 0.16666666666666666
+            },
+            "medium": {
+              "parts": 62,
+              "caught": 0.3870967741935484
+            },
+            "large": {
+              "parts": 8,
+              "caught": 0.875
+            }
+          },
+          "aupro": 0.9053673058380213
+        },
+        "pcb3": {
+          "auroc": 0.9399009900990098,
+          "threshold": 1.919761300086975,
+          "false_reject_rate": 0.039603960396039604,
+          "escape_rate": 0.33,
+          "caught_by_size": {
+            "small": {
+              "parts": 32,
+              "caught": 0.4375
+            },
+            "medium": {
+              "parts": 54,
+              "caught": 0.7222222222222222
+            },
+            "large": {
+              "parts": 14,
+              "caught": 1.0
+            }
+          },
+          "aupro": 0.8681300147711287
+        },
+        "pcb4": {
+          "auroc": 0.9899009900990099,
+          "threshold": 2.125556707382202,
+          "false_reject_rate": 0.009900990099009901,
+          "escape_rate": 0.13,
+          "caught_by_size": {
+            "small": {
+              "parts": 3,
+              "caught": 0.0
+            },
+            "medium": {
+              "parts": 49,
+              "caught": 0.8571428571428571
+            },
+            "large": {
+              "parts": 48,
+              "caught": 0.9375
+            }
+          },
+          "aupro": 0.8918877606267125
+        }
+      }
+    },
+    {
+      "resolution": 512,
+      "memory": 2000,
+      "p50_ms": 30.889604502590373,
+      "p95_ms": 32.38312882895116,
+      "mean": {
+        "auroc": 0.9691997524752475,
+        "aupro": 0.9061389076981363,
+        "false_reject_rate": 0.019925742574257426,
+        "escape_rate": 0.2825
+      },
+      "products": {
+        "pcb1": {
+          "auroc": 0.9718,
+          "threshold": 2.068394660949707,
+          "false_reject_rate": 0.03,
+          "escape_rate": 0.16,
+          "caught_by_size": {
+            "small": {
+              "parts": 52,
+              "caught": 0.7692307692307693
+            },
+            "medium": {
+              "parts": 35,
+              "caught": 0.8857142857142857
+            },
+            "large": {
+              "parts": 13,
+              "caught": 1.0
+            }
+          },
+          "aupro": 0.9602631566932015
+        },
+        "pcb2": {
+          "auroc": 0.9449,
+          "threshold": 2.164918899536133,
+          "false_reject_rate": 0.02,
+          "escape_rate": 0.33,
+          "caught_by_size": {
+            "small": {
+              "parts": 30,
+              "caught": 0.43333333333333335
+            },
+            "medium": {
+              "parts": 62,
+              "caught": 0.7419354838709677
+            },
+            "large": {
+              "parts": 8,
+              "caught": 1.0
+            }
+          },
+          "aupro": 0.9213686306392765
+        },
+        "pcb3": {
+          "auroc": 0.9678217821782178,
+          "threshold": 2.0945143699645996,
+          "false_reject_rate": 0.0297029702970297,
+          "escape_rate": 0.27,
+          "caught_by_size": {
+            "small": {
+              "parts": 32,
+              "caught": 0.5
+            },
+            "medium": {
+              "parts": 54,
+              "caught": 0.7962962962962963
+            },
+            "large": {
+              "parts": 14,
+              "caught": 1.0
+            }
+          },
+          "aupro": 0.866148950053246
+        },
+        "pcb4": {
+          "auroc": 0.9922772277227723,
+          "threshold": 2.48004412651062,
+          "false_reject_rate": 0.0,
+          "escape_rate": 0.37,
+          "caught_by_size": {
+            "small": {
+              "parts": 3,
+              "caught": 0.0
+            },
+            "medium": {
+              "parts": 49,
+              "caught": 0.6122448979591837
+            },
+            "large": {
+              "parts": 48,
+              "caught": 0.6875
+            }
+          },
+          "aupro": 0.8767748934068217
+        }
+      }
+    }
+  ],
+  "mean": [
+    {
+      "auroc": 0.9198344059405941,
+      "aupro": 0.8466629379212831,
+      "false_reject_rate": 0.0199009900990099,
+      "escape_rate": 0.515
+    },
+    {
+      "auroc": 0.9571754950495049,
+      "aupro": 0.8975674013591683,
+      "false_reject_rate": 0.02987623762376238,
+      "escape_rate": 0.34750000000000003
+    },
+    {
+      "auroc": 0.9691997524752475,
+      "aupro": 0.9061389076981363,
+      "false_reject_rate": 0.019925742574257426,
+      "escape_rate": 0.2825
+    }
+  ]
+}

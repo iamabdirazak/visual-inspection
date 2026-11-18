@@ -1,0 +1,142 @@
+{
+  "name": "Visual Inspection Model",
+  "task": "Decide whether a printed circuit board is defective and locate the defect, learned from normal boards only",
+  "models": [
+    {
+      "file": "inspection.onnx",
+      "products": [
+        "pcb1",
+        "pcb2",
+        "pcb3",
+        "pcb4"
+      ],
+      "size_mb": 34.1,
+      "threshold": 2.1362
+    }
+  ],
+  "architecture": {
+    "backbone": "ResNet-18 to layer 3, ImageNet weights, frozen; layers 2 and 3 averaged over 3 x 3 and joined",
+    "patch_features": 384,
+    "patch_stride": 8,
+    "backbone_parameters": 2782784,
+    "memory": "8000 normal patch features per model, chosen by greedy coreset selection",
+    "score": "distance of each patch to its nearest normal patch; map upsampled and smoothed (sigma 4 px); part score is the map maximum"
+  },
+  "input": "BGR frame, long side resized to 512 pixels, sides multiples of 16, ImageNet normalisation",
+  "outputs": {
+    "map": "defect map at the working resolution",
+    "score": "part score; reject when at or above the threshold"
+  },
+  "fitting": {
+    "data": "VisA, boards PCB1 to PCB4, official one-class split",
+    "fit_images_per_board": 200,
+    "calibration_images_per_board": 200,
+    "patches_per_fit_image": 512,
+    "defect_images_used": 0
+  },
+  "threshold": {
+    "rule": "conformal quantile of calibration scores",
+    "target_false_reject_rate": 0.01
+  },
+  "test": {
+    "data": "VisA one-class test split, 100 normal and 100 defective boards per board type",
+    "results": {
+      "auroc": 0.969679702970297,
+      "false_reject_rate": 0.03477722772277228,
+      "escape_rate": 0.23250000000000004
+    },
+    "per_board": {
+      "pcb1": {
+        "auroc": 0.9707,
+        "threshold": 2.136228322982788,
+        "false_reject_rate": 0.03,
+        "escape_rate": 0.31,
+        "caught_by_size": {
+          "small": {
+            "parts": 52,
+            "caught": 0.6346153846153846
+          },
+          "medium": {
+            "parts": 35,
+            "caught": 0.6571428571428571
+          },
+          "large": {
+            "parts": 13,
+            "caught": 1.0
+          }
+        }
+      },
+      "pcb2": {
+        "auroc": 0.9499000000000001,
+        "threshold": 2.136228322982788,
+        "false_reject_rate": 0.02,
+        "escape_rate": 0.27,
+        "caught_by_size": {
+          "small": {
+            "parts": 30,
+            "caught": 0.4
+          },
+          "medium": {
+            "parts": 62,
+            "caught": 0.8548387096774194
+          },
+          "large": {
+            "parts": 8,
+            "caught": 1.0
+          }
+        }
+      },
+      "pcb3": {
+        "auroc": 0.9673267326732673,
+        "threshold": 2.136228322982788,
+        "false_reject_rate": 0.0297029702970297,
+        "escape_rate": 0.31,
+        "caught_by_size": {
+          "small": {
+            "parts": 32,
+            "caught": 0.46875
+          },
+          "medium": {
+            "parts": 54,
+            "caught": 0.7407407407407407
+          },
+          "large": {
+            "parts": 14,
+            "caught": 1.0
+          }
+        }
+      },
+      "pcb4": {
+        "auroc": 0.9907920792079208,
+        "threshold": 2.136228322982788,
+        "false_reject_rate": 0.0594059405940594,
+        "escape_rate": 0.04,
+        "caught_by_size": {
+          "small": {
+            "parts": 3,
+            "caught": 0.3333333333333333
+          },
+          "medium": {
+            "parts": 49,
+            "caught": 0.9591836734693877
+          },
+          "large": {
+            "parts": 48,
+            "caught": 1.0
+          }
+        }
+      }
+    },
+    "threshold_with_defects_for_reference": {
+      "false_reject_rate": 0.09452970297029703,
+      "escape_rate": 0.05
+    }
+  },
+  "latency": {
+    "p50_ms": 48.5,
+    "p95_ms": 50.5,
+    "threads": 4,
+    "measured": "camera frame to map and score, ONNX Runtime on a laptop CPU"
+  },
+  "license": "MIT for the code; backbone weights from torchvision (ImageNet); VisA under CC BY 4.0"
+}

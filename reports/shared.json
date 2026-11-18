@@ -1,0 +1,303 @@
+{
+  "setting": {
+    "resolution": 512,
+    "memory": 8000,
+    "p50_ms": 48.543708500801586,
+    "p95_ms": 50.45968716003699
+  },
+  "models": [
+    {
+      "model": "one per board",
+      "memory": 8000,
+      "p95_ms": 50.45968716003699,
+      "mean": {
+        "auroc": 0.9696435643564356,
+        "false_reject_rate": 0.022425742574257425,
+        "escape_rate": 0.325
+      },
+      "products": {
+        "pcb1": {
+          "auroc": 0.9718,
+          "threshold": 1.9799569845199585,
+          "false_reject_rate": 0.04,
+          "escape_rate": 0.19,
+          "caught_by_size": {
+            "small": {
+              "parts": 52,
+              "caught": 0.7115384615384616
+            },
+            "medium": {
+              "parts": 35,
+              "caught": 0.8857142857142857
+            },
+            "large": {
+              "parts": 13,
+              "caught": 1.0
+            }
+          }
+        },
+        "pcb2": {
+          "auroc": 0.9541999999999999,
+          "threshold": 2.0746402740478516,
+          "false_reject_rate": 0.02,
+          "escape_rate": 0.34,
+          "caught_by_size": {
+            "small": {
+              "parts": 30,
+              "caught": 0.36666666666666664
+            },
+            "medium": {
+              "parts": 62,
+              "caught": 0.7580645161290323
+            },
+            "large": {
+              "parts": 8,
+              "caught": 1.0
+            }
+          }
+        },
+        "pcb3": {
+          "auroc": 0.9613861386138614,
+          "threshold": 2.0036630630493164,
+          "false_reject_rate": 0.0297029702970297,
+          "escape_rate": 0.3,
+          "caught_by_size": {
+            "small": {
+              "parts": 32,
+              "caught": 0.46875
+            },
+            "medium": {
+              "parts": 54,
+              "caught": 0.7592592592592593
+            },
+            "large": {
+              "parts": 14,
+              "caught": 1.0
+            }
+          }
+        },
+        "pcb4": {
+          "auroc": 0.9911881188118812,
+          "threshold": 2.467165231704712,
+          "false_reject_rate": 0.0,
+          "escape_rate": 0.47,
+          "caught_by_size": {
+            "small": {
+              "parts": 3,
+              "caught": 0.0
+            },
+            "medium": {
+              "parts": 49,
+              "caught": 0.46938775510204084
+            },
+            "large": {
+              "parts": 48,
+              "caught": 0.625
+            }
+          }
+        }
+      }
+    },
+    {
+      "model": "shared",
+      "memory": 8000,
+      "p95_ms": 50.45968716003699,
+      "mean": {
+        "auroc": 0.969679702970297,
+        "false_reject_rate": 0.03477722772277228,
+        "escape_rate": 0.23250000000000004
+      },
+      "products": {
+        "pcb1": {
+          "auroc": 0.9707,
+          "threshold": 2.136228322982788,
+          "false_reject_rate": 0.03,
+          "escape_rate": 0.31,
+          "caught_by_size": {
+            "small": {
+              "parts": 52,
+              "caught": 0.6346153846153846
+            },
+            "medium": {
+              "parts": 35,
+              "caught": 0.6571428571428571
+            },
+            "large": {
+              "parts": 13,
+              "caught": 1.0
+            }
+          }
+        },
+        "pcb2": {
+          "auroc": 0.9499000000000001,
+          "threshold": 2.136228322982788,
+          "false_reject_rate": 0.02,
+          "escape_rate": 0.27,
+          "caught_by_size": {
+            "small": {
+              "parts": 30,
+              "caught": 0.4
+            },
+            "medium": {
+              "parts": 62,
+              "caught": 0.8548387096774194
+            },
+            "large": {
+              "parts": 8,
+              "caught": 1.0
+            }
+          }
+        },
+        "pcb3": {
+          "auroc": 0.9673267326732673,
+          "threshold": 2.136228322982788,
+          "false_reject_rate": 0.0297029702970297,
+          "escape_rate": 0.31,
+          "caught_by_size": {
+            "small": {
+              "parts": 32,
+              "caught": 0.46875
+            },
+            "medium": {
+              "parts": 54,
+              "caught": 0.7407407407407407
+            },
+            "large": {
+              "parts": 14,
+              "caught": 1.0
+            }
+          }
+        },
+        "pcb4": {
+          "auroc": 0.9907920792079208,
+          "threshold": 2.136228322982788,
+          "false_reject_rate": 0.0594059405940594,
+          "escape_rate": 0.04,
+          "caught_by_size": {
+            "small": {
+              "parts": 3,
+              "caught": 0.3333333333333333
+            },
+            "medium": {
+              "parts": 49,
+              "caught": 0.9591836734693877
+            },
+            "large": {
+              "parts": 48,
+              "caught": 1.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "model": "shared",
+      "memory": 32000,
+      "p95_ms": 128.8419146061642,
+      "mean": {
+        "auroc": 0.9715747524752475,
+        "false_reject_rate": 0.029826732673267325,
+        "escape_rate": 0.275
+      },
+      "products": {
+        "pcb1": {
+          "auroc": 0.9729,
+          "threshold": 2.085096597671509,
+          "false_reject_rate": 0.03,
+          "escape_rate": 0.35,
+          "caught_by_size": {
+            "small": {
+              "parts": 52,
+              "caught": 0.5961538461538461
+            },
+            "medium": {
+              "parts": 35,
+              "caught": 0.6
+            },
+            "large": {
+              "parts": 13,
+              "caught": 1.0
+            }
+          }
+        },
+        "pcb2": {
+          "auroc": 0.9633,
+          "threshold": 2.085096597671509,
+          "false_reject_rate": 0.02,
+          "escape_rate": 0.36,
+          "caught_by_size": {
+            "small": {
+              "parts": 30,
+              "caught": 0.36666666666666664
+            },
+            "medium": {
+              "parts": 62,
+              "caught": 0.7258064516129032
+            },
+            "large": {
+              "parts": 8,
+              "caught": 1.0
+            }
+          }
+        },
+        "pcb3": {
+          "auroc": 0.9598019801980198,
+          "threshold": 2.085096597671509,
+          "false_reject_rate": 0.009900990099009901,
+          "escape_rate": 0.35,
+          "caught_by_size": {
+            "small": {
+              "parts": 32,
+              "caught": 0.40625
+            },
+            "medium": {
+              "parts": 54,
+              "caught": 0.7037037037037037
+            },
+            "large": {
+              "parts": 14,
+              "caught": 1.0
+            }
+          }
+        },
+        "pcb4": {
+          "auroc": 0.9902970297029703,
+          "threshold": 2.085096597671509,
+          "false_reject_rate": 0.0594059405940594,
+          "escape_rate": 0.04,
+          "caught_by_size": {
+            "small": {
+              "parts": 3,
+              "caught": 0.3333333333333333
+            },
+            "medium": {
+              "parts": 49,
+              "caught": 0.9591836734693877
+            },
+            "large": {
+              "parts": 48,
+              "caught": 1.0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "mean": [
+    {
+      "auroc": 0.9696435643564356,
+      "false_reject_rate": 0.022425742574257425,
+      "escape_rate": 0.325
+    },
+    {
+      "auroc": 0.969679702970297,
+      "false_reject_rate": 0.03477722772277228,
+      "escape_rate": 0.23250000000000004
+    },
+    {
+      "auroc": 0.9715747524752475,
+      "false_reject_rate": 0.029826732673267325,
+      "escape_rate": 0.275
+    }
+  ]
+}
